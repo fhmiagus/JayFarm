@@ -10,7 +10,7 @@ export const products = [
     featured: false,
     title: 'Bebek Utuh Segar',
     description: 'Bebek utuh segar siap masak, dibersihkan secara higienis dan dikemas dengan baik untuk menjaga kesegaran.',
-    specs: ['⚖️ Berat 1.5 – 2.5 kg/ekor', '🌡️ Disimpan dalam cold storage', '📦 Min. order 10 ekor'],
+    specs: ['⚖️ Berat 0.7 – 2.5 kg/ekor', '🌡️ Disimpan dalam cold storage', '📦 Min. order 10 ekor'],
   },
   {
     id: 'parting',
