@@ -1,7 +1,9 @@
+import productBebekUtuh from '../assets/product-bebek-utuh.png';
+
 export const products = [
   {
     id: 'whole',
-    emoji: '🦆',
+    img: productBebekUtuh,
     tag: 'Terlaris',
     tagVariant: 'default',
     featured: false,

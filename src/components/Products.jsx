@@ -13,15 +13,21 @@ function ProductCard({ product }) {
       transition={{ type: 'spring', stiffness: 300, damping: 22 }}
     >
       {/* Image */}
-      <div
-        className={`h-44 flex items-center justify-center text-7xl ${
-          product.featured
-            ? 'bg-gradient-to-br from-green-700 to-green-600'
-            : 'bg-gradient-to-br from-green-100 to-[#c8e6ca]'
-        }`}
-      >
-        {product.emoji}
-      </div>
+      {product.img ? (
+        <div className="h-44 overflow-hidden">
+          <img src={product.img} alt={product.title} className="w-full h-full object-cover" />
+        </div>
+      ) : (
+        <div
+          className={`h-44 flex items-center justify-center text-7xl ${
+            product.featured
+              ? 'bg-gradient-to-br from-green-700 to-green-600'
+              : 'bg-gradient-to-br from-green-100 to-[#c8e6ca]'
+          }`}
+        >
+          {product.emoji}
+        </div>
+      )}
 
       <div className="p-7 flex flex-col flex-1">
         {/* Tag */}
