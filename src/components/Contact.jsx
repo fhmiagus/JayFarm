@@ -43,6 +43,37 @@ export default function Contact() {
           description="Hubungi kami sekarang dan dapatkan penawaran terbaik untuk kebutuhan bebek pedaging Anda."
         />
 
+        {/* Map */}
+        <FadeUpWrapper className="mb-14">
+          <div className="rounded-xl overflow-hidden border border-gray-200 shadow-md">
+            <div className="flex items-center justify-between px-5 py-3.5 bg-gray-50 border-b border-gray-200">
+              <div className="flex items-center gap-2.5">
+                <span className="text-lg">📍</span>
+                <span className="font-semibold text-gray-800 text-sm">Lokasi Jay Farm</span>
+                <span className="text-gray-400 text-xs">— Kab. Kuningan, Jawa Barat</span>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/R3N7WzqtcwAVvfoe8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-md bg-green-600 text-white hover:bg-green-700 transition-colors"
+              >
+                Buka di Maps ↗
+              </a>
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15840.299343768713!2d108.5662196!3d-7.0004694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1360249bbef5%3A0x8b8e75ea8d89da15!2sJay%20Farm!5e0!3m2!1sid!2sid!4v1777178671903!5m2!1sid!2sid"
+              width="100%"
+              height="380"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokasi Jay Farm"
+            />
+          </div>
+        </FadeUpWrapper>
+
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-16 items-start">
           {/* Contact info */}
           <FadeUpWrapper>
@@ -100,7 +131,7 @@ export default function Contact() {
                       value={form.phone}
                       onChange={handleChange}
                       required
-                      placeholder="+62 8xx-xxxx-xxxx"
+                      placeholder="6281324456440"
                       className="w-full px-4 py-3 border-[1.5px] border-gray-200 rounded-sm text-sm text-gray-800 bg-white outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/15 transition-all"
                     />
                   </div>
