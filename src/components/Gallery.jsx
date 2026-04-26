@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion';
 import { FadeUpWrapper } from './ui/FadeUpWrapper';
 import { SectionHeader } from './ui/SectionHeader';
+import gallery1 from '../assets/gallery1.png';
+import gallery2 from '../assets/gallery2.png';
 
 const items = [
-  { emoji: '🦆', label: 'Kawanan Bebek di Kandang', large: true },
-  { emoji: '🌾', label: 'Area Padang Bebek',         large: false },
-  { emoji: '🏠', label: 'Kandang Modern',             large: false },
-  { emoji: '🌿', label: 'Pakan Alami Bebek',          large: false },
-  { emoji: '🧑‍🌾', label: 'Tim Peternak JayFarm',     large: false },
-  { emoji: '🍖', label: 'Produk Bebek Siap Kirim',   large: true },
+  { img: gallery1, label: 'Kawanan DOD di Kandang',    large: true },
+  { emoji: '🌾',   label: 'Area Padang Bebek',          large: false },
+  { emoji: '🏠',   label: 'Kandang Modern',              large: false },
+  { emoji: '🌿',   label: 'Pakan Alami Bebek',           large: false },
+  { emoji: '🧑‍🌾', label: 'Tim Peternak JayFarm',       large: false },
+  { img: gallery2, label: 'Bebek Siap Panen',            large: true },
 ];
 
 export default function Gallery() {
@@ -32,14 +34,27 @@ export default function Gallery() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 22 }}
               >
-                <div
-                  className={`flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-green-100 to-[#c8e6ca] ${
-                    item.large ? 'aspect-video text-5xl' : 'aspect-square text-4xl'
-                  }`}
-                >
-                  {item.emoji}
-                  <p className="text-sm text-gray-600 font-medium">{item.label}</p>
-                </div>
+                {item.img ? (
+                  <div className={`relative overflow-hidden ${item.large ? 'aspect-video' : 'aspect-square'}`}>
+                    <img
+                      src={item.img}
+                      alt={item.label}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 py-3">
+                      <p className="text-sm text-white font-medium">{item.label}</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className={`flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-green-100 to-[#c8e6ca] ${
+                      item.large ? 'aspect-video text-5xl' : 'aspect-square text-4xl'
+                    }`}
+                  >
+                    {item.emoji}
+                    <p className="text-sm text-gray-600 font-medium">{item.label}</p>
+                  </div>
+                )}
               </motion.div>
             </FadeUpWrapper>
           ))}

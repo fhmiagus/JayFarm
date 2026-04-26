@@ -61,8 +61,8 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-5">Kontak</h4>
             {[
-              '📍 Kab. Bogor, Jawa Barat',
-              '📞 +62 812-3456-7890',
+              '📍 Dusun Jl. Cikalong, Pajawankidul, Kec. Lebakwangi, Kabupaten Kuningan, Jawa Barat 45574',
+              '📞 +6281324456440',
               '📧 info@jayfarm.id',
               '🕐 Senin–Sabtu, 07.00–17.00',
             ].map((item) => (
