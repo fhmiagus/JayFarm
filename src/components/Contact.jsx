@@ -5,7 +5,7 @@ import { SectionHeader } from './ui/SectionHeader';
 
 const contactItems = [
   { icon: '📍', label: 'Alamat',               value: 'Dusun Jl. Cikalong, Pajawankidul, Kec. Lebakwangi, Kabupaten Kuningan, Jawa Barat 45574' },
-  { icon: '📞', label: 'Telepon / WhatsApp',   value: '081324456440' },
+  { icon: '📞', label: 'Telepon / WhatsApp',   value: '085117117440' },
   { icon: '📧', label: 'Email',                 value: 'info@jayfarm.id' },
   { icon: '🕐', label: 'Jam Operasional',       value: 'Senin – Sabtu: 07.00 – 17.00 WIB\nMinggu: 08.00 – 13.00 WIB' },
 ];
@@ -132,7 +132,7 @@ export default function Contact() {
                       value={form.phone}
                       onChange={handleChange}
                       required
-                      placeholder="6281324456440"
+                      placeholder="6285117117440"
                       className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-[1.5px] border-gray-200 rounded-sm text-xs sm:text-sm text-gray-800 bg-white outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/15 transition-all"
                     />
                   </div>

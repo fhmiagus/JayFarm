@@ -62,7 +62,7 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 text-sm sm:text-base">Kontak</h4>
             {[
               '📍 Dusun Jl. Cikalong, Pajawankidul, Kec. Lebakwangi, Kabupaten Kuningan, Jawa Barat 45574',
-              '📞 +6281324456440',
+              '📞 +6285117117440',
               '📧 info@jayfarm.id',
               '🕐 Senin–Sabtu, 07.00–17.00',
             ].map((item) => (
