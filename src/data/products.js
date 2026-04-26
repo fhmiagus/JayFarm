@@ -1,4 +1,5 @@
 import productBebekUtuh from '../assets/product-bebek-utuh.png';
+import productBebekHidup from '../assets/gallery1.png';
 
 export const products = [
   {
@@ -23,7 +24,7 @@ export const products = [
   },
   {
     id: 'live',
-    emoji: '🥚',
+    img: productBebekHidup,
     tag: 'Populer',
     tagVariant: 'default',
     featured: false,

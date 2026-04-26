@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion';
 import { FadeUpWrapper } from './ui/FadeUpWrapper';
 import { SectionHeader } from './ui/SectionHeader';
-import gallery1 from '../assets/gallery1.png';
 import gallery2 from '../assets/gallery2.png';
 
 const items = [
-  { img: gallery1, label: 'Kawanan DOD di Kandang',    large: true },
   { emoji: '🌾',   label: 'Area Padang Bebek',          large: false },
   { emoji: '🏠',   label: 'Kandang Modern',              large: false },
   { emoji: '🌿',   label: 'Pakan Alami Bebek',           large: false },
