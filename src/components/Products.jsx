@@ -15,7 +15,7 @@ function ProductImage({ product }) {
 
   if (product.imgs) {
     return (
-      <div className="relative h-40 sm:h-44 overflow-hidden">
+      <div className="relative h-56 sm:h-64 overflow-hidden">
         <img
           src={product.imgs[idx]}
           alt={product.title}
@@ -40,7 +40,7 @@ function ProductImage({ product }) {
 
   if (product.img) {
     return (
-      <div className="h-40 sm:h-44 overflow-hidden">
+      <div className="h-56 sm:h-64 overflow-hidden">
         <img src={product.img} alt={product.title} className="w-full h-full object-cover" />
       </div>
     );
@@ -48,7 +48,7 @@ function ProductImage({ product }) {
 
   return (
     <div
-      className={`h-40 sm:h-44 flex items-center justify-center text-6xl sm:text-7xl ${
+      className={`h-56 sm:h-64 flex items-center justify-center text-6xl sm:text-7xl ${
         product.featured
           ? 'bg-gradient-to-br from-green-700 to-green-600'
           : 'bg-gradient-to-br from-green-100 to-[#c8e6ca]'
