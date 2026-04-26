@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react';
 import { motion, useInView, animate } from 'framer-motion';
 
 const stats = [
-  { target: 10,   suffix: '+', label: 'Tahun Pengalaman' },
-  { target: 5000, suffix: '+', label: 'Ekor / Panen' },
+  { target: 3,    suffix: '+', label: 'Tahun Pengalaman' },
+  { target: 1000, suffix: '+', label: 'Ekor / Panen' },
   { target: 200,  suffix: '+', label: 'Pelanggan Setia' },
 ];
 

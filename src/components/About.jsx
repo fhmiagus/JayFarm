@@ -40,13 +40,13 @@ export default function About() {
           <FadeUpWrapper delay={0.15}>
             <SectionTag>Tentang JayFarm</SectionTag>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-5 leading-snug">
-              Peternakan Bebek Pedaging Berdedikasi Sejak 2014
+              Peternakan Bebek Pedaging Berdedikasi Sejak 2024
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              JayFarm adalah peternakan bebek pedaging yang telah berdiri sejak tahun 2014, berlokasi di lingkungan pedesaan yang asri dan jauh dari polusi. Kami menggabungkan kearifan lokal dengan teknologi peternakan modern untuk menghasilkan bebek pedaging berkualitas premium.
+              JayFarm adalah peternakan bebek pedaging yang telah berdiri sejak tahun 2024, berlokasi di lingkungan pedesaan yang asri dan jauh dari polusi. Kami menggabungkan kearifan lokal dengan teknologi peternakan modern untuk menghasilkan bebek pedaging berkualitas premium.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Dengan lahan seluas lebih dari 2 hektar, JayFarm mampu mengelola ribuan ekor bebek secara berkelanjutan, memastikan setiap produk yang kami hasilkan memenuhi standar keamanan pangan dan kesehatan tertinggi.
+              Dengan lahan cukup luas, JayFarm mampu mengelola ribuan ekor bebek secara berkelanjutan, memastikan setiap produk yang kami hasilkan memenuhi standar keamanan pangan dan kesehatan tertinggi.
             </p>
 
             <div className="flex flex-col gap-5 mb-10">
