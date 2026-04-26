@@ -14,12 +14,12 @@ function ProductCard({ product }) {
     >
       {/* Image */}
       {product.img ? (
-        <div className="h-44 overflow-hidden">
+        <div className="h-40 sm:h-44 overflow-hidden">
           <img src={product.img} alt={product.title} className="w-full h-full object-cover" />
         </div>
       ) : (
         <div
-          className={`h-44 flex items-center justify-center text-7xl ${
+          className={`h-40 sm:h-44 flex items-center justify-center text-6xl sm:text-7xl ${
             product.featured
               ? 'bg-gradient-to-br from-green-700 to-green-600'
               : 'bg-gradient-to-br from-green-100 to-[#c8e6ca]'
@@ -29,8 +29,7 @@ function ProductCard({ product }) {
         </div>
       )}
 
-      <div className="p-7 flex flex-col flex-1">
-        {/* Tag */}
+      <div className="p-5 sm:p-7 flex flex-col flex-1">
         <span
           className={`inline-block self-start text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3 ${
             product.tagVariant === 'premium'
@@ -41,12 +40,12 @@ function ProductCard({ product }) {
           {product.tag}
         </span>
 
-        <h3 className="text-lg font-bold text-gray-900 mb-2">{product.title}</h3>
-        <p className="text-gray-600 text-sm mb-5 flex-1">{product.description}</p>
+        <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{product.title}</h3>
+        <p className="text-gray-600 text-xs sm:text-sm mb-4 flex-1">{product.description}</p>
 
-        <ul className="mb-6">
+        <ul className="mb-5">
           {product.specs.map((spec) => (
-            <li key={spec} className="text-sm text-gray-600 py-1.5 border-b border-gray-200 last:border-0">
+            <li key={spec} className="text-xs sm:text-sm text-gray-600 py-1.5 border-b border-gray-200 last:border-0">
               {spec}
             </li>
           ))}
@@ -69,14 +68,14 @@ function ProductCard({ product }) {
 
 export default function Products() {
   return (
-    <section id="products" className="py-28 bg-gray-100">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="products" className="py-16 md:py-28 bg-gray-100">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6">
         <SectionHeader
           tag="Produk Kami"
           title="Pilihan Bebek Segar Berkualitas"
           description="Kami menyediakan berbagai pilihan produk bebek pedaging segar yang siap memenuhi kebutuhan rumah tangga maupun bisnis kuliner Anda."
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-7 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-7 items-start">
           {products.map((p, i) => (
             <FadeUpWrapper key={p.id} delay={i * 0.1}>
               <ProductCard product={p} />

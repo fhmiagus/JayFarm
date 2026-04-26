@@ -25,7 +25,7 @@ function Counter({ target, suffix = '' }) {
   }, [inView, target, suffix]);
 
   return (
-    <strong ref={ref} className="block text-3xl font-extrabold text-green-400 leading-none">
+    <strong ref={ref} className="block text-2xl sm:text-3xl font-extrabold text-green-400 leading-none">
       0{suffix}
     </strong>
   );
@@ -63,10 +63,10 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10" style={{ background: 'radial-gradient(ellipse,rgba(245,158,11,.1) 0%,transparent 50%)' }} />
       </div>
       {/* Decorative duck */}
-      <div className="absolute right-[-40px] top-1/2 -translate-y-1/2 text-[360px] opacity-[0.04] pointer-events-none select-none scale-x-[-1]">🦆</div>
+      <div className="absolute right-[-40px] top-1/2 -translate-y-1/2 text-[200px] sm:text-[360px] opacity-[0.04] pointer-events-none select-none scale-x-[-1]">🦆</div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-32">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-6 py-24 md:py-32">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -76,7 +76,7 @@ export default function Hero() {
           {/* Badge */}
           <motion.span
             variants={itemVariants}
-            className="inline-block bg-white/12 text-white/90 text-sm font-medium px-5 py-2 rounded-full border border-white/20 backdrop-blur-sm mb-6"
+            className="inline-block bg-white/12 text-white/90 text-xs sm:text-sm font-medium px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm mb-5"
           >
             🌿 Peternakan Bebek Premium
           </motion.span>
@@ -84,7 +84,7 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={itemVariants}
-            className="font-display text-5xl md:text-6xl lg:text-7xl text-white font-bold leading-[1.08] mb-6"
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold leading-[1.08] mb-5"
           >
             Kualitas Terbaik<br />
             dari <span className="text-green-400">JayFarm</span>
@@ -93,22 +93,22 @@ export default function Hero() {
           {/* Sub */}
           <motion.p
             variants={itemVariants}
-            className="text-lg text-white/80 leading-relaxed mb-10 max-w-xl"
+            className="text-base sm:text-lg text-white/80 leading-relaxed mb-8 max-w-xl"
           >
             Menyediakan bebek pedaging segar berkualitas tinggi dengan standar peternakan modern, higienis, dan berkelanjutan untuk memenuhi kebutuhan konsumen dan bisnis kuliner Anda.
           </motion.p>
 
           {/* CTA buttons */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-16">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-10">
             <a
               href="#products"
-              className="px-8 py-3.5 rounded-md font-semibold text-white bg-gradient-to-br from-green-600 to-green-700 shadow-lg hover:from-green-700 hover:to-green-800 hover:-translate-y-0.5 transition-all duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-md font-semibold text-sm sm:text-base text-white bg-gradient-to-br from-green-600 to-green-700 shadow-lg hover:from-green-700 hover:to-green-800 hover:-translate-y-0.5 transition-all duration-300"
             >
               Lihat Produk
             </a>
             <a
               href="#contact"
-              className="px-8 py-3.5 rounded-md font-semibold text-white bg-white/15 border-2 border-white/60 backdrop-blur-sm hover:bg-white/25 hover:border-white transition-all duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-md font-semibold text-sm sm:text-base text-white bg-white/15 border-2 border-white/60 backdrop-blur-sm hover:bg-white/25 hover:border-white transition-all duration-300"
             >
               Pesan Sekarang
             </a>
@@ -117,15 +117,17 @@ export default function Hero() {
           {/* Stats */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex flex-col sm:flex-row items-stretch sm:items-center bg-white/8 backdrop-blur-xl border border-white/15 rounded-md overflow-hidden"
+            className="grid grid-cols-3 sm:inline-flex bg-white/8 backdrop-blur-xl border border-white/15 rounded-md overflow-hidden w-full sm:w-auto"
           >
             {stats.map((stat, i) => (
-              <div key={stat.label} className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-0 px-8 py-5">
+              <div
+                key={stat.label}
+                className={`flex flex-col items-center justify-center px-4 sm:px-8 py-4 sm:py-5 ${
+                  i < stats.length - 1 ? 'border-r border-white/15' : ''
+                }`}
+              >
                 <Counter target={stat.target} suffix={stat.suffix} />
-                <span className="text-xs text-white/70 sm:mt-1">{stat.label}</span>
-                {i < stats.length - 1 && (
-                  <div className="hidden sm:block absolute right-0 top-4 bottom-4 w-px bg-white/20" />
-                )}
+                <span className="text-[10px] sm:text-xs text-white/70 mt-1 text-center">{stat.label}</span>
               </div>
             ))}
           </motion.div>
@@ -133,7 +135,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs">
         <span>Scroll ke bawah</span>
         <div className="w-4 h-4 border-r-2 border-b-2 border-white/40 animate-scroll-bounce" />
       </div>
