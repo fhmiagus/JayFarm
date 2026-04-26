@@ -1,5 +1,7 @@
 import productBebekUtuh from '../assets/product-bebek-utuh.png';
 import productBebekHidup from '../assets/gallery1.png';
+import productParting1 from '../assets/product-parting-1.png';
+import productParting2 from '../assets/product-parting-2.png';
 
 export const products = [
   {
@@ -14,7 +16,7 @@ export const products = [
   },
   {
     id: 'parting',
-    emoji: '🍖',
+    imgs: [productParting1, productParting2],
     tag: 'Premium',
     tagVariant: 'premium',
     featured: true,

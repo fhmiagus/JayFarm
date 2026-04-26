@@ -1,7 +1,63 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FadeUpWrapper } from './ui/FadeUpWrapper';
 import { SectionHeader } from './ui/SectionHeader';
 import { products } from '../data/products';
+
+function ProductImage({ product }) {
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    if (!product.imgs || product.imgs.length < 2) return;
+    const timer = setInterval(() => setIdx((i) => (i + 1) % product.imgs.length), 3000);
+    return () => clearInterval(timer);
+  }, [product.imgs]);
+
+  if (product.imgs) {
+    return (
+      <div className="relative h-40 sm:h-44 overflow-hidden">
+        <img
+          src={product.imgs[idx]}
+          alt={product.title}
+          className="w-full h-full object-cover transition-opacity duration-500"
+          key={idx}
+        />
+        {/* Dot indicators */}
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+          {product.imgs.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIdx(i)}
+              className={`w-1.5 h-1.5 rounded-full transition-all ${
+                i === idx ? 'bg-white scale-125' : 'bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (product.img) {
+    return (
+      <div className="h-40 sm:h-44 overflow-hidden">
+        <img src={product.img} alt={product.title} className="w-full h-full object-cover" />
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className={`h-40 sm:h-44 flex items-center justify-center text-6xl sm:text-7xl ${
+        product.featured
+          ? 'bg-gradient-to-br from-green-700 to-green-600'
+          : 'bg-gradient-to-br from-green-100 to-[#c8e6ca]'
+      }`}
+    >
+      {product.emoji}
+    </div>
+  );
+}
 
 function ProductCard({ product }) {
   return (
@@ -12,22 +68,7 @@ function ProductCard({ product }) {
       whileHover={{ y: -8, boxShadow: '0 16px 48px rgba(0,0,0,.18)' }}
       transition={{ type: 'spring', stiffness: 300, damping: 22 }}
     >
-      {/* Image */}
-      {product.img ? (
-        <div className="h-40 sm:h-44 overflow-hidden">
-          <img src={product.img} alt={product.title} className="w-full h-full object-cover" />
-        </div>
-      ) : (
-        <div
-          className={`h-40 sm:h-44 flex items-center justify-center text-6xl sm:text-7xl ${
-            product.featured
-              ? 'bg-gradient-to-br from-green-700 to-green-600'
-              : 'bg-gradient-to-br from-green-100 to-[#c8e6ca]'
-          }`}
-        >
-          {product.emoji}
-        </div>
-      )}
+      <ProductImage product={product} />
 
       <div className="p-5 sm:p-7 flex flex-col flex-1">
         <span
