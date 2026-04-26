@@ -1,4 +1,5 @@
-import productBebekUtuh from '../assets/product-bebek-utuh.png';
+import productUtuh1 from '../assets/product-utuh-1.png';
+import productUtuh2 from '../assets/product-utuh-2.png';
 import productBebekHidup from '../assets/gallery1.png';
 import productParting1 from '../assets/product-parting-1.png';
 import productParting2 from '../assets/product-parting-2.png';
@@ -6,7 +7,7 @@ import productParting2 from '../assets/product-parting-2.png';
 export const products = [
   {
     id: 'whole',
-    img: productBebekUtuh,
+    imgs: [productUtuh1, productUtuh2],
     tag: 'Terlaris',
     tagVariant: 'default',
     featured: false,
