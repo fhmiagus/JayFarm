@@ -11,9 +11,9 @@ export const products = [
     tag: 'Terlaris',
     tagVariant: 'default',
     featured: false,
-    title: 'Bebek Utuh Segar',
+    title: 'Bebek Utuh Segar/Karkas',
     description: 'Bebek utuh segar siap masak, dibersihkan secara higienis dan dikemas dengan baik untuk menjaga kesegaran.',
-    specs: ['⚖️ Berat 0.7 – 2.5 kg/ekor', '🌡️ Disimpan dalam cold storage', '📦 Min. order 10 ekor'],
+    specs: ['⚖️ Berat 0.7 – 2.5 kg/ekor', '🌡️ Disimpan dalam cold storage', '📦 Min. order 100 ekor'],
   },
   {
     id: 'parting',
@@ -23,7 +23,7 @@ export const products = [
     featured: true,
     title: 'Bebek Potong / Parting',
     description: 'Bebek yang telah dipotong per bagian (dada, paha, sayap) sesuai kebutuhan, ideal untuk restoran dan katering.',
-    specs: ['⚖️ Tersedia per kg atau per paket', '🍽️ Cocok untuk restoran & katering', '📦 Min. order 5 kg'],
+    specs: ['⚖️ Tersedia per kg atau per paket', '🍽️ Cocok untuk restoran & katering', '📦 Min. order 50 Ekor'],
   },
   {
     id: 'live',
@@ -33,6 +33,6 @@ export const products = [
     featured: false,
     title: 'Bebek Hidup',
     description: 'Bebek hidup siap jual untuk peternak lain, pemotong, atau konsumen yang menginginkan bebek langsung dari kandang.',
-    specs: ['⚖️ Berat 1.8 – 2.2 kg/ekor', '💪 Bebek sehat & aktif', '📦 Min. order 20 ekor'],
+    specs: ['⚖️ Berat 1.8 – 2.2 kg/ekor', '💪 Bebek sehat & aktif', '📦 Bebek hidup Minimal Pembelian 1.5 kg '],
   },
 ];
